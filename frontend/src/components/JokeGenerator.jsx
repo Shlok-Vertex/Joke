@@ -41,25 +41,41 @@ const JokeGenerator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-2xl space-y-8">
-        {/* Header */}
-        <div className="text-center space-y-4">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Smile className="h-12 w-12 text-orange-500" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
-              JokeMaster
-            </h1>
-            <Sparkles className="h-12 w-12 text-amber-500" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50/30 to-amber-50/60 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-orange-200/40 to-amber-200/40 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-yellow-200/30 to-orange-200/30 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-r from-amber-200/20 to-orange-200/20 rounded-full blur-xl animate-bounce delay-500"></div>
+      </div>
+
+      <div className="flex items-center justify-center min-h-screen p-4 relative z-10">
+        <div className="w-full max-w-4xl space-y-10">
+          {/* Header */}
+          <div className="text-center space-y-6">
+            <div className="flex items-center justify-center space-x-3 mb-6 group">
+              <div className="relative">
+                <Smile className="h-16 w-16 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-orange-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
+              </div>
+              <h1 className="text-7xl font-black bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 bg-clip-text text-transparent tracking-tight">
+                JokeMaster
+              </h1>
+              <div className="relative">
+                <Sparkles className="h-16 w-16 text-amber-500 group-hover:scale-110 transition-transform duration-300 group-hover:rotate-12" />
+                <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <p className="text-2xl text-gray-700 font-semibold tracking-wide">
+                Discover hilarious jokes in multiple languages
+              </p>
+              <div className="flex items-center justify-center space-x-2 text-lg text-gray-600 bg-white/50 backdrop-blur-sm px-6 py-2 rounded-full border border-white/20 shadow-lg">
+                <Globe className="h-5 w-5 text-blue-500" />
+                <span className="font-medium">Supporting 6 languages worldwide</span>
+              </div>
+            </div>
           </div>
-          <p className="text-xl text-gray-600 font-medium">
-            Discover hilarious jokes in multiple languages
-          </p>
-          <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
-            <Globe className="h-4 w-4" />
-            <span>Supporting 6 languages worldwide</span>
-          </div>
-        </div>
 
         {/* Language Selector */}
         <Card className="border-0 shadow-xl bg-white/80 backdrop-blur-sm">

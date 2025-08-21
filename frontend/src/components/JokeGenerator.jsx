@@ -57,7 +57,7 @@ const JokeGenerator = () => {
           </p>
           <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
             <Globe className="h-4 w-4" />
-            <span>Supporting 5 languages worldwide</span>
+            <span>Supporting 6 languages worldwide</span>
           </div>
         </div>
 

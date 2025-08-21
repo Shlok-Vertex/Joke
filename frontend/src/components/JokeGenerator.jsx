@@ -20,6 +20,7 @@ const JokeGenerator = () => {
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
     { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
   ];
 
   const handleGenerateJoke = async () => {
